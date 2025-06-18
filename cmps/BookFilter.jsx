@@ -1,6 +1,6 @@
 const { useState, useEffect } = React
 
-export function CarFilter({ defaultFilter, onSetFilter }) {
+export function BookFilter({ defaultFilter, onSetFilter }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState({ ...defaultFilter })
 
@@ -38,11 +38,11 @@ export function CarFilter({ defaultFilter, onSetFilter }) {
 
     const { txt, minSpeed } = filterByToEdit
     return (
-        <section className="car-filter container">
-            <h2>Filter Our Cars</h2>
+        <section className="book-filter container">
+            <h2>Filter Our Books</h2>
 
             <form>
-                <label htmlFor="txt">Vendor</label>
+                <label htmlFor="txt">Title</label>
                 <input onChange={handleChange} value={txt} name="txt" id="txt" type="text" />
 
                 <label htmlFor="minSpeed">Min Speed</label>

@@ -1,5 +1,5 @@
-import { BookPreview } from "../cmps/BookPreview.jsx"
 import { bookService } from "../services/book.service.js"
+import { LongText } from "../cmps/LongText.jsx"
 
 const { useState, useEffect } = React
 
@@ -56,7 +56,8 @@ export function BookDetails({ bookId, onBack }) {
 
             <h3>Price: <span className={`book-price ${getPriceClass(book.listPrice.amount)}`}>{book.listPrice.amount}</span></h3>
             <h4>Subtitle: {book.subtitle}</h4>
-            <p>{book.description}</p>
+            <LongText txt={book.description}/>
+             {/* <p>{book.description}</p> */}
 
             <section>
                 <h4>Authors</h4>

@@ -14,14 +14,17 @@ export const bookService = {
 }
 
 function query(filterBy = {}) {
+    
     return storageService.query(BOOK_KEY)
-        .then(books => {
-            if (filterBy.title) {
+    .then(books => {
+        console.log(filterBy);
+        
+            if (filterBy.title) {        
                 const regExp = new RegExp(filterBy.title, 'i')
                 books = books.filter(book => regExp.test(book.title))
             }
             if (filterBy.minPrice) {
-                books = books.filter(book => book.price >= filterBy.minPrice)
+                books = books.filter(book => book.listPrice.amount >= filterBy.minPrice)
             }
             return books
         })
@@ -49,7 +52,7 @@ function getEmptyBook(title = '', price = '') {
 }
 
 function getDefaultFilter() {
-    return { title: '', minPrice: '' }
+    return { title: '', minPrice: 0 }
 }
 
 function _createBooks() {

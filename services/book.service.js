@@ -26,6 +26,9 @@ function query(filterBy = {}) {
             if (filterBy.minPrice) {
                 books = books.filter(book => book.listPrice.amount >= filterBy.minPrice)
             }
+            if (filterBy.isOnSale) {
+                books = books.filter(book => book.listPrice.isOnSale)
+            }
             return books
         })
 }

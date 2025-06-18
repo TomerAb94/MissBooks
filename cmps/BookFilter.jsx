@@ -37,7 +37,7 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
      }
     */
 
-    const { title, minPrice } = filterByToEdit
+    const { title, minPrice,isOnSale } = filterByToEdit
     
     return (
         <section className="book-filter container">
@@ -49,6 +49,9 @@ export function BookFilter({ defaultFilter, onSetFilter }) {
 
                 <label htmlFor="minPrice">Min Price</label>
                 <input onChange={handleChange} value={minPrice || ''} name="minPrice" id="minPrice" type="number" />
+                
+                <label htmlFor="isOnSale">On Sale</label>
+                <input onChange={handleChange} value={isOnSale} name="isOnSale" id="isOnSale" type="checkbox" />
             </form>
         </section>
     )

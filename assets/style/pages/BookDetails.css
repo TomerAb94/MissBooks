@@ -1,18 +1,46 @@
 .book-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
+
 .book-details h1 {
     color: var(--clr1);
     font-size: 2em;
-    
+
 }
-.book-details h5 {
-    color: var(--clr2);
-}
+
 .book-details img {
-    max-width: 200px;
+    max-width: 200px !important;
     display: block;
     margin: auto;
+}
+
+.book-details p {
+    font-size: 0.9em;
+}
+
+.book-price.red {
+    color: red
+}
+
+.book-price.green {
+    color: green
+}
+
+.img-container{
+position: relative;
+overflow: hidden;
+}
+
+.on-sale-badge {
+    position: absolute;
+    top: 20px;
+    left: -25px;
+
+    background-color: red;
+    color: white;
+    padding: 2px 30px;
+    transform: rotate(-45deg);
+    font-weight: bold;
 }

@@ -14,3 +14,7 @@
 .book-preview img {
     max-width: 100px;
 }
+
+.book-preview .on-sale-badge {
+    font-size: 0.7em;
+}

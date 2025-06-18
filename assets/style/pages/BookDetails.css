@@ -1,11 +1,10 @@
 .book-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .book-details h1 {
-    color: var(--clr1);
     font-size: 2em;
 
 }
